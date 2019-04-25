@@ -2,11 +2,9 @@ from flask import Flask, request, make_response
 import requests
 
 TARGET = 'https://www2.inkomensportaal.nl/'
+TARGET = 'https://accounts.google.com/'
 
 app = Flask(__name__, static_folder=None)
-
-print(requests.get('https://www2.inkomensportaal.nl/nedal/Login'))
-exit()
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>', methods=['GET', 'POST'])
